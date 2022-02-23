@@ -1,14 +1,17 @@
 import 'reflect-metadata';
+import 'dotenv/config';
 import 'express-async-errors';
 import express, { NextFunction, Request, Response } from 'express';
 
 import '@shared/container';
 import { router } from './routes';
 import { AppError } from '@shared/errors/AppError';
+import uploadConfig from '@config/upload';
 
 const app = express();
 
 app.use(express.json());
+app.use('/files', express.static(uploadConfig.uploadsFolder));
 app.use(router);
 
 app.use((err: Error, req: Request, res: Response, _: NextFunction) => {
