@@ -20,15 +20,24 @@ class ContactsRepository implements IContactsRepository {
     });
   }
 
-  public async findByEmailOrPN({ email, phone_number }: IFindByEmailOrPNDTO): Promise<Contact> {
+  public async findByEmailOrPN({ email, phone_number, contact_id }: IFindByEmailOrPNDTO): Promise<Contact> {
     return prisma.contact.findFirst({
       where: {
-        OR: [
+        AND: [
           {
-            email,
+            id: {
+              not: contact_id,
+            }
           },
           {
-            phone_number,
+            OR: [
+              {
+                email,
+              },
+              {
+                phone_number,
+              }
+            ]
           }
         ]
       }
