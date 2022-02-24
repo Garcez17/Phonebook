@@ -9,7 +9,11 @@ import { IContactsRepository } from "../../../repositories/IContactsRepository";
 
 class ContactsRepository implements IContactsRepository {
   public async find(): Promise<Contact[]> {
-    return prisma.contact.findMany();
+    return prisma.contact.findMany({
+      orderBy: {
+        name: 'asc'
+      }
+    });
   }
 
   public async findById(contact_id: string): Promise<Contact> {

@@ -11,7 +11,7 @@ class UpdateContactController {
 
     const contact = await updateContact.execute({
       name,
-      avatar_filename: req.file.filename,
+      avatar_filename: req.file?.filename,
       contact_id,
       email,
       phone_number,

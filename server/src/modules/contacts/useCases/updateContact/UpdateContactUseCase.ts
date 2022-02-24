@@ -10,7 +10,7 @@ interface IRequest {
   name: string;
   email: string;
   phone_number: string;
-  avatar_filename: string;
+  avatar_filename: string | null;
 }
 
 @injectable()
@@ -36,9 +36,11 @@ class UpdateContactUseCase {
 
     if (findExistentContact) throw new AppError('Contact with this data already exists.');
 
-    await this.storageProvider.deleteFile(contact.avatar);
+    if (avatar_filename) {
+      await this.storageProvider.deleteFile(contact.avatar);
 
-    await this.storageProvider.saveFile(avatar_filename);
+      await this.storageProvider.saveFile(avatar_filename);
+    }
 
     return this.contactsRepository.update({
       contact_id: contact.id,
