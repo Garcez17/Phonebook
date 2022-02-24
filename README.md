@@ -12,21 +12,21 @@ Aplicação de agenda telefônica desenvolvida em ReactJS, NodeJS e PostgresSQL.
 
 ## Funcionalidades
 
-[x] Criar contato.
+- [x] Criar contato.
 
-[x] Listar contato.
+- [x] Listar contato.
 
-[x] Pesquisar contato na lista.
+- [x] Pesquisar contato na lista.
 
-[x] Visualizar perfil de contato.
+- [x] Visualizar perfil de contato.
 
-[x] Atualizar dados de contato.
+- [x] Atualizar dados de contato.
 
-[x] Deletar contato.
+- [x] Deletar contato.
 
-[x] Responsividade.
+- [x] Responsividade.
 
-[x] Cache e prefetch de dados.
+- [x] Cache e prefetch de dados.
 
 
 ## Feito com:
