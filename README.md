@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img alt="move.it dashboard" src=".github/banner.png" width="100%">
+  <img alt="Phonebook" src=".github/banner.png" width="100%">
 </p>
 
 ## Sobre o Projeto
@@ -75,4 +75,4 @@ $ yarn dev
 
 ## Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/Garcez17/Move-It/blob/main/LICENSE) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/Garcez17/Phonebook/blob/main/LICENSE) para mais detalhes.
