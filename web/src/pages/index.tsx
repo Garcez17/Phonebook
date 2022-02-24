@@ -6,9 +6,7 @@ import { FiPlus, FiSearch } from 'react-icons/fi';
 import { Contact } from "../components/Contact";
 import { ShimmerLoading } from "../components/ShimmerContactListLoading";
 
-import { getContact } from "../services/hooks/useContact";
 import { useContacts } from "../services/hooks/useContacts";
-import { queryClient } from "../services/queryClient";
 
 export default function Home() {
   const { data, isLoading } = useContacts();

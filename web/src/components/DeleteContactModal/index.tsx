@@ -40,6 +40,7 @@ export function DeleteContactModal({
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
+      ariaHideApp={false}
       overlayClassName="react-modal-overlay"
       className="react-modal-content"
     >

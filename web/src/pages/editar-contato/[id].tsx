@@ -16,17 +16,19 @@ export default function EditContact({ id }: EditContactProps) {
 
   return (
     <div className="p-4">
-      <button
-        className="flex items-center justify-center w-8 h-8 duration-100 rounded-full hover:bg-gray-800"
-        type="button"
-        onClick={() => router.back()}
-      >
-        <FiChevronLeft className="w-6 h-6" />
-      </button>
       {!data || isLoading ? (
         <p>Loading...</p>
       ) : (
-        <ContactForm defaultValues={data.contact} />
+        <div className="relative">
+          <button
+            className="flex items-center justify-center w-8 h-8 duration-100 rounded-full hover:bg-gray-800 absolute top-2"
+            type="button"
+            onClick={() => router.back()}
+          >
+            <FiChevronLeft className="w-6 h-6" />
+          </button>
+          <ContactForm defaultValues={data.contact} />
+        </div>
       )}
     </div>
   )

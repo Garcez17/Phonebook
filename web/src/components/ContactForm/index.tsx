@@ -172,7 +172,7 @@ export function ContactForm({ defaultValues }: ContactFormProps) {
         </p>
       </label>
 
-      <button type="submit" className="w-full h-10 mt-4 duration-100 bg-blue-500 rounded hover:bg-blue-600">Enviar</button>
+      <button type="submit" className="w-full h-10 mt-2 duration-100 bg-blue-500 rounded hover:bg-blue-600">Enviar</button>
     </form>
   )
 }

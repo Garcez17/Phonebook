@@ -6,9 +6,9 @@ export default function CreateContact() {
   const router = useRouter();
 
   return (
-    <div className="p-4">
+    <div className="p-4 relative">
       <button
-        className="flex items-center justify-center w-8 h-8 duration-100 rounded-full hover:bg-gray-800"
+        className="flex items-center justify-center w-8 h-8 duration-100 rounded-full hover:bg-gray-800 absolute top-4"
         type="button"
         onClick={() => router.back()}
       >
