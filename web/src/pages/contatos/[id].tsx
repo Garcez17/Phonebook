@@ -38,7 +38,7 @@ export default function Contact({ id }: ContactProps) {
               <FiChevronLeft className="w-6 h-6" />
             </button>
 
-            <Image className="rounded-full" src={data.contact.avatar_url} width={150} height={110} alt={data.contact.name} />
+            <Image className="rounded-3xl" src={data.contact.avatar_url} width={150} height={110} alt={data.contact.name} />
             <h1 className="text-bold text-2xl">{data.contact.name}</h1>
           </header>
           <section className="bg-gray-800 flex-1 rounded-t-3xl px-6 flex flex-col divide-y divide-gray-900">
